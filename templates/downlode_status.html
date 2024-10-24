@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Download Status</title>
+  </head>
+  <body>
+    <h1>Download Status</h1>
+    <div id="download-status">
+      {% if download_status %}
+        <p>Download {{ download_status }}%</p>
+      {% else %}
+        <p>Downloading...</p>
+      {% endif %}
+    </div>
+  </body>
+</html>
