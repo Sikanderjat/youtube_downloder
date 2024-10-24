@@ -16,13 +16,15 @@ def downloded():
         yt={
             'formate':'best',
             'outtmpl':'C:/Users/sikan/Videos/sikander/%(title)s.%(ext)s'
+            'cookiefile': 'cookies.txt',  # Path to your cookies file
         }
         with yt_dlp.YoutubeDL(yt) as ydl:
             ydl.download([url])
         return render_template("downloded.html", message="Video downloaded successfully!")
     except Exception as e:
         return render_template("downloded.html", message=f"Error: {str(e)}")
-    
+  
+
 
 
 #app.run(debug=True, host="localhost", port=5500)
